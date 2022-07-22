@@ -1,7 +1,7 @@
 /*
  * @Description: 矩阵乘法
  * @Date: 2022-07-20 14:16:53
- * @LastEditTime: 2022-07-22 12:50:53
+ * @LastEditTime: 2022-07-22 13:09:55
  * @FilePath: /01_gemm/02_gemm.cu
  */
 #include "common.h"
@@ -220,13 +220,13 @@ int main(int argc, char **argv)
     // int nn = 2;
     // int nk = 4;
 
-    int nm = 1 << 7;  // max for shear mem 
-    int nn = 1 << 7;
-    int nk = 1 << 7;
+    // int nm = 1 << 7;  // max for shear mem 
+    // int nn = 1 << 7;
+    // int nk = 1 << 7;
 
-    // int nm = 1 << 12;
-    // int nn = 1 << 12;
-    // int nk = 1 << 12;
+    int nm = 1 << 12;
+    int nn = 1 << 12;
+    int nk = 1 << 12;
 
 
     int nSizeA = nm*nn;
