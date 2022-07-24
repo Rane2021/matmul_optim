@@ -6,6 +6,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 find_package(CUDA REQUIRED)
 
-cuda_add_executable(test_cuda 02_gemm.cu common.h)
+cuda_add_executable(test_cuda 03_gemm_register_v1.cu common.h)
+target_link_libraries(test_cuda ${CUDA_cublas_LIBRARY})
 
-
+#  nvcc ../03_gemm_register.cu -o test -lcublas
